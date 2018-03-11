@@ -1,28 +1,41 @@
 {
-  "name": "anydir",
-  "version": "1.0.0",
-  "description": "Node Js Static File Server",
-  "main": "app.js",
-  "scripts": {
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/YuJhon/anydir.git"
-  },
-  "keywords": [
-    "Static",
-    "Server"
-  ],
-  "author": "JhonRain",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/YuJhon/anydir/issues"
-  },
-  "homepage": "https://github.com/YuJhon/anydir#readme",
-  "devDependencies": {
-    "babel-eslint": "^8.2.2",
-    "eslint": "^4.18.2",
-    "pre-commit": "^1.2.2"
-  }
+    "name": "anydir",
+    "version": "1.0.0",
+    "description": "Node Js Static File Server",
+    "main": "src/app.js",
+    "bin": {
+        "anydir": "bin/anydir"
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "fix": "eslint --fix ."
+    },
+    "pre-commit": [
+        "fix",
+        "lint"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/YuJhon/anydir.git"
+    },
+    "keywords": [
+        "Static",
+        "Server"
+    ],
+    "author": "JhonRain",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/YuJhon/anydir/issues"
+    },
+    "homepage": "https://github.com/YuJhon/anydir#readme",
+    "devDependencies": {
+        "babel-eslint": "^8.2.2",
+        "eslint": "^4.18.2",
+        "pre-commit": "^1.2.2"
+    },
+    "dependencies": {
+        "chalk": "^2.3.2",
+        "handlebars": "^4.0.11",
+        "yargs": "^11.0.0"
+    }
 }
